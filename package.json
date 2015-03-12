@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "TBA",
   "author": "K <khayusaki@gmail.com>",
-  "main": "lib/main.js",
+  "main": "libs/main.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/khay/findlose"
