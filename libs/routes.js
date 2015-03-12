@@ -1,7 +1,3 @@
-module.exports = function (app) {	
-
-    app.get("/", function (req, res) {
-        res.json({message: 'Hello World!'});
-    });
-
+module.exports = function(app){
+    app.get('/user', userController.getUser);
 };

@@ -3,6 +3,8 @@ var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var passport = require('passport');
 
+var userController = require('./controllers/user');
+
 // Connect to mongodb database
 mongoose.connect('mongodb://localhost/pagewerkz')
 
@@ -14,7 +16,10 @@ app.use(passport.initialize());
 
 // Router configuration
 var router = express.Router();
-var routes = require('./routes')(app);
+
+router.route('/user')
+ 	.get(userController.getUser)
+ 	.post(userController.postUser);
 
 app.use('/api', router);
 
